@@ -10,6 +10,9 @@ body{
   border: 1px solid #ccc;
   font-family: 'mylocal', "PingFangTC-Semibold", 'Times New Roman', serif;
 }
+a{
+  text-decoration: none;
+}
 .container{
   padding-left: 42px;
   padding-right: 42px;
@@ -25,6 +28,12 @@ body{
 .multiSheets{
   display: flex;
 }
+.multiSheets a:link,
+.multiSheets a:visited,
+.multiSheets a:hover,
+.multiSheets a:active{
+  color: #3F5D45;
+}
 .navbar ul{
   padding-left: 0;
   display: flex;
@@ -36,9 +45,12 @@ body{
   list-style-type: none;
 }
 .imgCart{
-  object-fit: contain;
+  /* object-fit: contain; */
+  display: flex;
+  align-items: center;
   margin-left: 80px;
 }
+
 .banner{
   background-image: url("../img/banner.png");
   background-position: center;
@@ -76,10 +88,24 @@ body{
   color: #3F5D45;
   background: rgb(205, 224, 215);  
 }
-.cata_item:not(:nth-child(2)){
+/* .cata_item:not(:nth-child(2)){
+  background: white;  
+} */
+.cata_item a:link,
+.cata_item a:visited,
+.cata_item a:hover,
+.cata_item a:active{
   color: #3F5D45;
 }
+.cata_item a{
+  display: block;       /* 使<a>的inline屬性變成block，好處：可以讓<a>可按的空間擴展，不僅限於<a></a>所包住的文字範圍。 */
+}
 .product{
+  /* 以下為了去除<ul>的內建屬性。 */
+  list-style-type: none;
+  padding-left: 0px;
+  margin: 0;
+  /* 以上是為了去除<ul>的內建屬性。 */
   width: 620px;
   display: flex;
   flex-wrap: wrap;
@@ -103,20 +129,22 @@ body{
   border-top: none;
   border-bottom: none;
   box-sizing: border-box;
+  height: 56px;
+  line-height: 56px;
 }
 .itemDes{
   width: 173px;
-  height: 56px;
+  /* height: 56px;
   line-height: 56px;
-  margin-top: -5px;
+  margin-top: -5px; */
 }
 .price{
   display: inline-block;
   width: 127px;
-  height: 56px;
   border-left: 1px solid #EAF0ED;  
+  /* height: 56px;
   line-height: 56px;
-  margin-top: -5px;
+  margin-top: -5px; */
 }
 .addIn{
   width: 100%;
@@ -125,9 +153,15 @@ body{
   color: #3F5D45;
   font-size: 1.2rem;  
   font-weight: 700;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  line-height: 65px;
+}
+.addIn a:link,
+.addIn a:visited,
+.addIn a:hover,
+.addIn a:active{
+  color: #3F5D45;
+  display: block;
 }
 .tagHot{
   width: 36px;
