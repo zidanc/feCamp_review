@@ -204,3 +204,85 @@ a{
   color: #EAF0ED;
   background: #3F5D45;
 }
+
+.subscribe{
+  height: 116px;
+  background: #3F5D45;
+}
+.container122{
+  padding-left: 122px;
+  padding-right: 122px;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.subscribeTitle{
+  display: flex;
+  align-items: center;
+}
+.logoLight{
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.logoLight + span{
+  color: #EAF0ED;
+  font-size: 1.45rem;
+}
+.inputCon{
+  display: flex;
+  align-items: center;
+}
+.subsEmail{
+  box-sizing: border-box;
+  background: rgb(205, 224, 215);
+  border-style: none;
+  height: 56px;
+  width: 252px;
+  font-size: x-large;
+}
+/* input無法產生偽元素 */
+.emailIcon{         
+  height: 56px;
+  width: 64px;
+  background: rgb(205, 224, 215);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrowIcon{         
+  height: 56px;
+  width: 64px;
+  background: #FFE180;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-style: none;
+}
+.bgFooter{
+  background: rgb(205, 224, 215);
+  height: 341px;
+}
+.contactCon{
+  height: 219px;
+  width: 227px;
+  display: flex;
+}
+.contactCon>img{
+  height: 27px;
+}
+.contactInfo span{
+  color: #3F5D45;
+  display: block;
+}
+.sloganFooter{
+  writing-mode: vertical-rl;
+  color: #3F5D45;
+  font-weight: bolder;
+  font-size: 1.4rem;
+  height: 219px;
+}
+.sloganFooter div:first-child{
+  padding-left: 8px;
+}
