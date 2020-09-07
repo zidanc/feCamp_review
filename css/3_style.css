@@ -1,14 +1,14 @@
-/* @font-face{
+@font-face{
   font-family: 'mylocal';
-  src: local("PingFangTC-Semibold"),
+  src: local("Microsoft JhengHei"),
   url("PingFangTC-Semibold.otf");
-} */
+}
 body{
   width: 1024px;
-  margin: 20px auto;
+  margin: 0px auto;
   box-sizing: border-box;
-  border: 1px solid #ccc;
-  font-family: 'mylocal', "PingFangTC-Semibold", 'Times New Roman', serif;
+  /* border: 1px solid #ccc; */
+  font-family: "PingFangTC-Semibold", 'Times New Roman', serif;
 }
 a{
   text-decoration: none;
@@ -215,6 +215,7 @@ a{
   display: flex;
   justify-content: space-between;
   height: 100%;
+  flex-flow: row wrap;
 }
 .subscribeTitle{
   display: flex;
@@ -249,6 +250,7 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .arrowIcon{         
   height: 56px;
@@ -266,8 +268,12 @@ a{
 }
 .contactCon{
   height: 219px;
-  width: 227px;
+  width: 50%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 38.9px;
 }
 .contactCon>img{
   height: 27px;
@@ -275,14 +281,34 @@ a{
 .contactInfo span{
   color: #3F5D45;
   display: block;
+  font-family: 'mylocal';
 }
 .sloganFooter{
   writing-mode: vertical-rl;
   color: #3F5D45;
+  font-family: 'mylocal';
   font-weight: bolder;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   height: 219px;
+  width: 50%;
+  padding-top: 30px;
 }
 .sloganFooter div:first-child{
-  padding-left: 8px;
+  padding-left: 3px;
+}
+.iconSocial{
+  width: 50%;
+}
+.iconSocial img{
+  width: 32px;
+  height: 32px;
+}
+.iconSocial img:first-child{
+  margin-right: 3px;
+}
+.copyRight{
+  width: 50%;
+  font-family: 'mylocal';
+  color: #3F5D45;
+  text-align: right;
 }
