@@ -3,21 +3,30 @@
   src: local("Microsoft JhengHei"),
   url("PingFangTC-Semibold.otf");
 }
-body{
-  width: 1024px;
-  margin: 0px auto;
+*{
   box-sizing: border-box;
+}
+body{
+  margin: 0px auto;
   /* border: 1px solid #ccc; */
   font-family: "PingFangTC-Semibold", 'Times New Roman', serif;
 }
 a{
   text-decoration: none;
 }
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 .container{
+  margin: 0 auto;
   padding-left: 42px;
   padding-right: 42px;
 }
+
 .navbar{
+  max-width: 1024px;
   padding-top: 30px;
   padding-bottom: 30px;
   display: flex;
@@ -25,9 +34,12 @@ a{
   font-weight: 700;
   color: #3F5D45;
 }
+
 .multiSheets{
   display: flex;
+  align-items: center;
 }
+
 .multiSheets a:link,
 .multiSheets a:visited,
 .multiSheets a:hover,
@@ -39,8 +51,12 @@ a{
   display: flex;
   justify-content: space-between;
   width: 215px;
-  height: 22px;
 }
+  @media (max-width:992px){
+    .navbar ul{
+      margin: 0 auto;
+    } 
+  }
 .navbar ul li{
   list-style-type: none;
 }
@@ -52,20 +68,34 @@ a{
 }
 
 .banner{
-  background-image: url("../img/banner.png");
-  background-position: center;
-  width: 940px;
-  height: 496px;
-  background-repeat: no-repeat;
-  margin-bottom: 60px;
+  /* background-image: url("../img/banner.png"); */  /*將標籤改成<img>*/
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  margin: 0 auto 60px;
 }
+  @media (max-width:992px){
+    .banner{
+      margin: 0 auto 30px;
+    }
+  }  
 .mainCatalog{
+  max-width: 1024px;
   display: flex;
 }
 .menu{
   width: 300px;
   margin-right: 20px;
 }
+
+  @media (max-width:992px){
+    .mainCatalog{
+      display: block;
+    }
+    .menu{
+      width: 100%;  
+    }
+  }
+
 .cata_dessert,
 .cata_item{
   width: 100%;
@@ -77,18 +107,23 @@ a{
   letter-spacing: 2px;
   border: 1px solid #EAF0ED;  
 }
+
 .cata_dessert{
   color: #EAF0ED;
   background: #3F5D45;
 }
 .cata_item{
   margin: -1px 0;
+  transition: all 0.4s;
 }
-.cata_item:nth-child(2){
+.cata_item:first-child{
+  background: #EAF0ED;
+}
+.cata_item:hover{
   color: #3F5D45;
   background: rgb(205, 224, 215);  
 }
-/* .cata_item:not(:nth-child(2)){
+/* .cata_item:not(:nth-child(1)){
   background: white;  
 } */
 .cata_item a:link,
@@ -100,13 +135,23 @@ a{
 .cata_item a{
   display: block;       /* 使<a>的inline屬性變成block，好處：可以讓<a>可按的空間擴展，不僅限於<a></a>所包住的文字範圍。 */
 }
+  @media (max-width:992px){
+    .flex{
+      display: flex;
+      flex-flow: row wrap;
+      margin-bottom: 30px;
+    }
+    .cata_item{
+      width: 50%;
+    }
+  }
 .product{
   /* 以下為了去除<ul>的內建屬性。 */
   list-style-type: none;
   padding-left: 0px;
   margin: 0;
   /* 以上是為了去除<ul>的內建屬性。 */
-  width: 620px;
+  max-width: 620px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -114,9 +159,18 @@ a{
 .productImg{
   display: flex;
   flex-wrap: wrap;
-  width: 300px;
+  width: 48%;
   position: relative;
   margin-bottom: 20px;
+}
+@media (max-width:992px){
+  .product{
+    max-width: 992px;
+  }
+  .itemPic{
+    width: 100%;
+    height: auto;
+  }
 }
 .content{
   width: 100%;
@@ -128,24 +182,26 @@ a{
   border: 1px solid #EAF0ED; 
   border-top: none;
   border-bottom: none;
-  box-sizing: border-box;
   height: 56px;
   line-height: 56px;
 }
 .itemDes{
-  width: 173px;
-  /* height: 56px;
-  line-height: 56px;
-  margin-top: -5px; */
+  width: 70%;
 }
 .price{
   display: inline-block;
   width: 127px;
   border-left: 1px solid #EAF0ED;  
-  /* height: 56px;
-  line-height: 56px;
-  margin-top: -5px; */
 }
+@media (max-width: 992px){
+  .itemDes{
+    width: 58%;
+  }
+  .price{
+    width: 42%;
+  }
+}
+
 .addIn{
   width: 100%;
   height: 65px;
@@ -184,9 +240,15 @@ a{
   top: 19px;
 }
 .page{
+  max-width: 1024px;
   display: flex;
   justify-content: flex-end;
   margin-bottom: 60px;
+}
+@media (max-width: 992px){
+  .page{
+    margin-bottom: 20px;
+  }
 }
 .pNum{
   display: flex;
@@ -198,7 +260,6 @@ a{
   margin-left: -1px;
   color: #3F5D45;
   font-size: 1.2rem;
-  box-sizing: border-box;
 }
 .pNum:nth-child(2){
   color: #EAF0ED;
@@ -209,9 +270,10 @@ a{
   height: 116px;
   background: #3F5D45;
 }
+
 .container122{
-  padding-left: 122px;
-  padding-right: 122px;
+  margin: 0 auto;
+  max-width: 942px;
   display: flex;
   justify-content: space-between;
   height: 100%;
@@ -235,12 +297,12 @@ a{
   align-items: center;
 }
 .subsEmail{
-  box-sizing: border-box;
   background: rgb(205, 224, 215);
   border-style: none;
   height: 56px;
   width: 252px;
   font-size: x-large;
+  outline: none;
 }
 /* input無法產生偽元素 */
 .emailIcon{         
@@ -289,7 +351,6 @@ a{
   font-family: 'mylocal';
   font-weight: bolder;
   font-size: 1.5rem;
-  height: 219px;
   width: 50%;
   padding-top: 30px;
 }
@@ -297,6 +358,7 @@ a{
   padding-left: 3px;
 }
 .iconSocial{
+  display: flex;
   width: 50%;
 }
 .iconSocial img{
