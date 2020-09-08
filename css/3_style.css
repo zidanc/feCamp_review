@@ -25,6 +25,43 @@ img{
   padding-right: 42px;
 }
 
+.emblem{
+  background-image: url("../img/logo-all-dark.svg");
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 40px;
+  background-size: contain;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (min-width: 768px){
+  .navbar>a:first-child{
+    display: none;
+  }
+  .navbar>a>img{
+    display: none;
+  }
+}
+@media (max-width: 767px){
+  .container{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .navbar>a>img{
+    display: block;
+    width: 24px;
+    height: 24px;
+    align-self: center;
+  }
+  .emblem{
+    background-image: url("../img/logotype-sm-dark.svg");
+    width: 115px; 
+    height: auto;
+    align-self: center;
+  }
+}
 .navbar{
   max-width: 1024px;
   padding-top: 30px;
@@ -57,6 +94,12 @@ img{
       margin: 0 auto;
     } 
   }
+  @media (max-width:767px){
+    .navbar ul{
+      display: none;
+    } 
+  }
+
 .navbar ul li{
   list-style-type: none;
 }
@@ -66,16 +109,30 @@ img{
   align-items: center;
   margin-left: 80px;
 }
+@media (max-width: 767px){
+  .imgCart{
+    margin-left: 0;
+  }
+}
 
 .banner{
   /* background-image: url("../img/banner.png"); */  /*將標籤改成<img>*/
   /* background-position: center; */
   /* background-repeat: no-repeat; */
   margin: 0 auto 60px;
+  padding-left: 42px;
+  padding-right: 42px;
 }
   @media (max-width:992px){
     .banner{
       margin: 0 auto 30px;
+    }
+  }
+  @media (max-width:767px){
+    .banner{
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }  
 .mainCatalog{
