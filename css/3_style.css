@@ -245,11 +245,11 @@ img{
   position: relative;
   margin-bottom: 20px;
 }
-/* @media (min-width: 993px){
-  .productImg:nth-child(2n){
-    margin-left: 20px;
+@media (min-width: 993px){
+  .productImg:nth-of-type(odd){
+    right: 20px;
   }
-} */
+}
 @media (max-width:992px){
   .container{
     padding-left: 42px;
