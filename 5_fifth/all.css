@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.header {
+  padding: 10px 0;
+}
+
+.header ul {
+  padding-left: 0;
+}
+
+.header ul li a {
+  /* SCSS多利用巢狀寫法(Nesting)，CSS巢狀不要超過四層 */
+  color: orange;
+  font-size: 26px;
+}
+
+.header .trigger {
+  display: none;
+}
+
+.footer {
+  max-width: 1000px;
+  height: auto;
+  background: orange;
+}
+/*# sourceMappingURL=all.css.map */

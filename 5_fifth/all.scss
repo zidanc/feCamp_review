@@ -1,0 +1,22 @@
+$ora: orange;
+
+.header{
+  padding: 10px 0;
+  ul{
+    padding-left: 0;
+    li a{              /* SCSS多利用巢狀寫法(Nesting)，CSS巢狀不要超過四層 */
+      color: $ora;
+      font-size: 26px;
+    }
+  }
+
+  .trigger{
+    display: none;
+  }
+}
+
+.footer{
+  max-width: 1000px;
+  height: auto;
+  background: $ora;
+}
