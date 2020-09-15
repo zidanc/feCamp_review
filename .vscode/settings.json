@@ -1,3 +1,19 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "files.autoSaveDelay": 10000,
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "editor.fontSize": 16,
+  "php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+
+  "liveSassCompile.settings.formats": [
+    {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": "/css/"
+    }
+  ]
+
 }

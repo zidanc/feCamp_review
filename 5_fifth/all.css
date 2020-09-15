@@ -1,4 +1,20 @@
 @charset "UTF-8";
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.index h1 {
+  color: darkred;
+}
+
 .header {
   padding: 10px 0;
 }
@@ -10,7 +26,7 @@
 .header ul li a {
   /* SCSS多利用巢狀寫法(Nesting)，CSS巢狀不要超過四層 */
   color: orange;
-  font-size: 26px;
+  font-size: 32px;
 }
 
 .header .trigger {
