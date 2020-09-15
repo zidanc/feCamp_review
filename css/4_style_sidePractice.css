@@ -1,0 +1,94 @@
+@keyframes example{
+  0%{
+    left:0;
+    top:0;
+  }
+  25%{
+    left:0;
+    top:200px;
+  }
+  50%{
+    left:200px;
+    top:200px;
+    background: purple;
+  }
+  75%{
+    left:200px;
+    top:0;
+  }
+  100%{
+    left:100px;
+    top:100px;
+    background: hotpink;
+  }
+}
+
+.box{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay: 0;
+  animation-iteration-count: 2; 
+  animation-fill-mode: both; 
+}
+.wrapper{
+  width: 300px;
+  height: 300px;
+  border:1px solid black;
+}
+
+
+
+.card{
+  width: 300px;
+  height: 300px;
+}
+.card-img{
+  text-align: center;
+  background: #e8eeea;
+  transition: transform 0.6s;
+}
+.card:hover .card-img {
+  /* transform: scaleX(-1); */
+  /* transform: rotate3d(0,1,0,180deg); */
+  transform: rotateY(180deg);
+}
+
+
+
+
+a {
+  text-decoration: none;
+}
+.list {
+  width: 300px;
+  text-align: center;
+}
+
+.list-title {
+  font-size: 24px;
+  background: #3F5D45;
+  color: #EAF0ED;
+  padding: 16px 0;
+}
+
+.list-item {
+  border: 1px solid #EAF0ED;
+
+}
+
+.list .active {
+  background: #EAF0ED;
+}
+
+.list-link {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #3F5D45;
+  display: block;
+  padding: 16px 0;
+}
