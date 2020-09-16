@@ -1,5 +1,25 @@
 @import "reset";
+@import "grid";
 @import "index";
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after{
+    clear: both;
+  }
+}
+
+@mixin circle($size,$bgcolor){
+  border-radius: 50%;
+  height: $size;
+  width: $size*1.2;
+  font-size: $size/3;
+  background: $bgcolor;
+}
 
 $ora: orange;
 $font-m: 16px;
@@ -26,4 +46,30 @@ $font-xl: $font-m*2;
   max-width: 1000px;
   height: auto;
   background: $ora;
+}
+
+.menu{
+  @include clearfix;
+}
+
+.box{
+  @include circle(48px,#336699);
+}
+
+.product{
+  max-width: 1024px;
+  height: 60px;
+  @include pad(){
+    width: 49%;
+    height: auto;
+  }
+  @include iphone5(){
+    width: 100%;
+  }
+  a{
+    color: #228855;
+    @include iphone5(){
+      display: none;
+    }
+  }
 }

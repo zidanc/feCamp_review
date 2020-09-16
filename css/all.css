@@ -1,0 +1,86 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.index h1 {
+  color: darkred;
+}
+
+.header {
+  padding: 10px 0;
+}
+
+.header ul {
+  padding-left: 0;
+}
+
+.header ul li a {
+  /* SCSS多利用巢狀寫法(Nesting)，CSS巢狀不要超過四層 */
+  color: orange;
+  font-size: 32px;
+}
+
+.header .trigger {
+  display: none;
+}
+
+.footer {
+  max-width: 1000px;
+  height: auto;
+  background: orange;
+}
+
+.menu:before, .menu:after {
+  content: "";
+  display: table;
+}
+
+.menu:after {
+  clear: both;
+}
+
+.box {
+  border-radius: 50%;
+  height: 48px;
+  width: 57.6px;
+  font-size: 16px;
+  background: #336699;
+}
+
+.product {
+  max-width: 1024px;
+  height: 60px;
+}
+
+@media (max-width: 767px) {
+  .product {
+    width: 49%;
+    height: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .product {
+    width: 100%;
+  }
+}
+
+.product a {
+  color: #228855;
+}
+
+@media (max-width: 320px) {
+  .product a {
+    display: none;
+  }
+}
+/*# sourceMappingURL=all.css.map */

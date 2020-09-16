@@ -1,0 +1,36 @@
+//@mixin + @content，可以方便css更有語意。
+@mixin desktop{
+  @media (max-width: 1280px){
+    @content;
+  }
+}
+@mixin desktop-top{
+  @media (max-width: 1023px){
+    @content;
+  }
+}
+@mixin desktop-below{
+  @media (max-width: 1024px){
+    @content;
+  }
+}
+@mixin pad{
+  @media (max-width: 767px){
+    @content;
+  }
+}
+@mixin iphone{        //iphone5橫式大小
+  @media (max-width: 568px){
+    @content;
+  }
+}
+@mixin mobile480{
+  @media (max-width: 480px){
+    @content;
+  }
+}
+@mixin iphone5{       //iphone5直式大小
+  @media (max-width: 320px){
+    @content;
+  }
+}
